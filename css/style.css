@@ -14,6 +14,10 @@ header {
   background: #FFF;
 }
 
+header .mobile {
+  display: none;
+}
+
 header .row {
   align-items: center;
   display: flex;
@@ -102,6 +106,7 @@ footer {
   background: #FFF;
   box-sizing: border-box;
   display: flex;
+  gap: 2rem;
   justify-content: space-between;
   min-height: 4rem;
   padding: 2rem;
@@ -113,12 +118,13 @@ footer nav > ul {
   gap: 1rem;
   list-style: none;
 }
-footer nav > ul li  {}
+
 footer nav > ul li a {
   color: #646464;
   font-size: .875rem;
   text-decoration: none;
 }
+
 footer .copyright {
   font-size: .875rem;
 }
@@ -126,14 +132,29 @@ footer .copyright {
 /**
  * General / Components
  **/
-
 .logo-container {
   height: 1rem;
   width: 100px;
 }
 
+.menu-icon {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: .25rem;
+  height: 1.125rem;
+  width: 1.125rem;
+}
 
-/* Account Badge */
+.menu-icon hr {
+  background: black;
+  border: none;
+  height: 2px;
+  margin: 0;
+  width: 100%;
+}
+
 .account-badge {
   background: #D5D5D5;
   border-radius: .5rem;
@@ -157,4 +178,35 @@ footer .copyright {
   right: -.5rem;
   top: -.5rem;
   width: .875rem;
+}
+
+
+/**
+ * Media queries to add a smidge of responsiveness.
+ */
+@media (max-width: 1024px) {
+  /** Header **/
+  header .mobile {
+    align-items: center;
+    display: flex;
+    gap: 2rem;
+    min-height: 64px;
+    padding: 0 2rem;
+  }
+
+  header .row,
+  header .row-alt {
+    display: none;
+  }
+
+  header .logo-container {
+    border: none;
+    padding: 0;
+  }
+
+  /** Footer **/
+  footer {
+    align-items: center;
+    flex-direction: column;
+  }
 }
