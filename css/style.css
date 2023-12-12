@@ -103,6 +103,7 @@ main {
 
 main .content-header {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   margin-bottom: 2rem;
 }
@@ -149,9 +150,17 @@ h1 {
   font-weight: 600;
 }
 
+.font-medium {
+  font-weight: 600;
+}
+.font-normal {
+  font-weight: 500;
+}
+
 button {
   align-items: center;
   background: transparent;
+  border-width: 1px;
   border-radius: .5rem;
   border-color: transparent;
   cursor: pointer;
@@ -159,6 +168,7 @@ button {
   gap: .25rem;
   justify-content: space-between;
   padding: .5rem .75rem;
+  outline: inherit;
 }
 
 button.primary {
@@ -167,12 +177,44 @@ button.primary {
   color: #FFF;
 }
 
-button.secondary {} /* No secondary buttons, here for consistency */
+button.secondary {
+  background: #FFF;
+  border-color: #898989;
+  color: #000;
+}
 
 button.tertiary {
   background: transparent;
   border-color: transparent;
   color: #040138;
+}
+
+button.disabled {
+  background: #F2F2F2;
+  border-color: #D5D5D5;
+  color: #898989;
+}
+
+.card {
+  background: #FFF;
+  border-radius: 1rem;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+.card-header,
+.card-footer {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-header {
+  padding: 1.5rem 1rem .75rem;
+}
+
+.card-footer {
+  justify-content: flex-end;
+  padding: .75rem 1rem 1.5rem;
 }
 
 .logo-container {
@@ -223,6 +265,59 @@ button.tertiary {
   width: .875rem;
 }
 
+.table-wrapper {
+  overflow-x: scroll;
+}
+
+table {
+  border-collapse: collapse; /* remove that pesky margin around the table */
+  width: 100%;
+}
+
+table th,
+table td {
+  padding: .5rem 1rem;
+  text-align: start;
+}
+
+tbody tr td {
+  background: #FFF;
+}
+
+tbody tr:nth-child(1) td {
+  background: #F2F2F2;
+}
+
+.table-img {
+  background: #FFF;
+  border: 1px solid #707070;
+  height: 2rem;
+  width: 2rem;
+}
+
+.pagination {
+  align-items: stretch;
+  display: flex;
+  gap: .5rem;
+}
+
+.pagination div {
+  align-items: center;
+  display: flex;
+  gap: .5rem;
+  padding: 0 .5rem;
+}
+.pagination input {
+  border: 1px solid #898989;
+  border-radius: .5rem;
+  height: 100%;
+  padding: 0 .25rem;
+  text-align: center;
+  width: 2rem;
+}
+.pagination input {
+  appearance: none;
+}
 
 /**
  * Media queries to add a smidge of responsiveness.
