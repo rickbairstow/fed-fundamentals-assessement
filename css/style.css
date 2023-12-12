@@ -70,15 +70,25 @@ header nav > ul li {
   min-height: 48px;
   padding: 0 1rem;
 }
+
 header nav.primary .active {
   border-color: #029FB4;
 }
+
 header nav.secondary .active {
   border-color: #029FB4;
 }
+
 header nav a {
   color: inherit;
   text-decoration: none;
+}
+
+header .account {
+  align-items: center;
+  display: flex;
+  gap: 1rem;
+  padding-right: 2rem;
 }
 
 /** Content **/
@@ -113,8 +123,38 @@ footer .copyright {
   font-size: .875rem;
 }
 
-/** General **/
+/**
+ * General / Components
+ **/
+
 .logo-container {
   height: 1rem;
   width: 100px;
+}
+
+
+/* Account Badge */
+.account-badge {
+  background: #D5D5D5;
+  border-radius: .5rem;
+  color: #171e31;
+  font-weight: 700;
+  padding: .625rem;
+  position: relative;
+}
+
+.account-badge > div {
+  align-items: center;
+  background: #040138;
+  border: 2px solid #FFF;
+  border-radius: 9999px;
+  color: #FFF;
+  display: flex;
+  font-size: .625rem;
+  height: .875rem;
+  justify-content: center;
+  position: absolute;
+  right: -.5rem;
+  top: -.5rem;
+  width: .875rem;
 }
