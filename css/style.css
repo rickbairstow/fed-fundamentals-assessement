@@ -101,6 +101,18 @@ main {
   padding: 2rem;
 }
 
+main .content-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+main .content-header-buttons {
+  align-items: center;
+  display: flex;
+  gap: .5rem;
+}
+
 /** Footer **/
 footer {
   background: #FFF;
@@ -132,6 +144,37 @@ footer .copyright {
 /**
  * General / Components
  **/
+h1 {
+  font-size: 1.75rem;
+  font-weight: 600;
+}
+
+button {
+  align-items: center;
+  background: transparent;
+  border-radius: .5rem;
+  border-color: transparent;
+  cursor: pointer;
+  display: inline-flex;
+  gap: .25rem;
+  justify-content: space-between;
+  padding: .5rem .75rem;
+}
+
+button.primary {
+  background: #040138;
+  border-color: #040138;
+  color: #FFF;
+}
+
+button.secondary {} /* No secondary buttons, here for consistency */
+
+button.tertiary {
+  background: transparent;
+  border-color: transparent;
+  color: #040138;
+}
+
 .logo-container {
   height: 1rem;
   width: 100px;
