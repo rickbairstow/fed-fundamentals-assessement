@@ -37,7 +37,9 @@ header .row-alt {
 }
 
 header .logo-container {
+  align-items: center;
   border-right: 1px solid #898989;
+  display: flex;
   padding: 0 1rem 0 2rem;
 }
 
@@ -237,11 +239,6 @@ button.disabled {
   padding: .75rem 1rem 1.5rem;
 }
 
-.logo-container {
-  height: 1rem;
-  width: 100px;
-}
-
 .menu-icon {
   align-items: center;
   display: flex;
@@ -341,6 +338,12 @@ tbody tr:nth-child(1) td {
 }
 .pagination input {
   appearance: none;
+}
+
+.beta-text {
+  font-size: .75rem;
+  font-family: Roboto, 'sans-serif';
+  font-weight: 800;
 }
 
 /**
