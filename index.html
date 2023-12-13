@@ -410,13 +410,10 @@
     </footer>
 
     <!-- Some super spesh stuff that's needed for this page -->
-    <script type="module">
-        import { fairyDustCursor } from "https://unpkg.com/cursor-effects@latest/dist/esm.js";
-        new fairyDustCursor();
-    </script>
+    <script src="https://unpkg.com/cursor-effects@latest/dist/browser.js"></script>
     <script type="application/javascript">
-        window.addEventListener("load", (event) => {new cursoreffects.rainbowCursor({length: 3, colors: ["red", "blue"], size: 4,});
-        });
+        window.addEventListener('load', (event) => {
+            new cursoreffects.fairyDustCursor({colors: ["#040138", "#e758d7", "#e86200"]})
     </script>
 </body>
 </html>
