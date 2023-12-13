@@ -179,6 +179,8 @@ button,
 [type="reset"],
 [type="submit"] {
   -webkit-appearance: button;
+  border-image: initial;
+  border-style: none;
 }
 
 /**
