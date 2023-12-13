@@ -7,6 +7,10 @@ body, p, ul {
 /** Core **/
 body {
   font-family: Roboto, sans-serif;
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Header */
@@ -99,6 +103,7 @@ header .account {
 /** Content **/
 main {
   background: #F2F2F2;
+  flex-grow: 1;
   padding: 2rem;
 }
 
@@ -161,12 +166,11 @@ h1 {
 button {
   align-items: center;
   background: transparent;
-  border-width: 1px;
+  border: 1px solid transparent;
   border-radius: .5rem;
-  border-color: transparent;
   cursor: pointer;
   display: inline-flex;
-  gap: .25rem;
+  gap: .5rem;
   justify-content: space-between;
   padding: .5rem .75rem;
   outline: inherit;
@@ -177,11 +181,21 @@ button.primary {
   border-color: #040138;
   color: #FFF;
 }
+button.primary:hover {
+  background: #3D3A6C;
+  border-color: #3D3A6C;
+  color: #FFF;
+}
 
 button.secondary {
   background: #FFF;
-  border-color: #898989;
-  color: #000;
+  border-color: #040138;
+  color: #040138;
+}
+button.secondary:hover {
+  background: #F2F2F2;
+  border-color: #040138;
+  color: #040138;
 }
 
 button.tertiary {
@@ -189,11 +203,16 @@ button.tertiary {
   border-color: transparent;
   color: #040138;
 }
+button.tertiary:hover {
+  background: #EAEAEA;
+  border-color: #EAEAEA;
+  color: #3D3A6C;
+}
 
 button.disabled {
   background: #F2F2F2;
   border-color: #D5D5D5;
-  color: #898989;
+  color: #646464;
 }
 
 .card {
