@@ -316,6 +316,10 @@ tbody tr:nth-child(1) td {
   width: 2rem;
 }
 
+.table-img > img {
+  max-height: 100%;
+}
+
 .pagination {
   align-items: stretch;
   display: flex;
