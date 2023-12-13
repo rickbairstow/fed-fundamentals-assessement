@@ -301,6 +301,12 @@ table th {
   font-weight: 600;
 }
 
+table th > div {
+  align-items: center;
+  display: flex;
+  gap: .5rem;
+}
+
 tbody tr td {
   background: #FFF;
 }
